@@ -1,0 +1,34 @@
+{
+  "name": "m2m-example",
+  "version": "1.0.0",
+  "description": "Example for how to implement m2m tokens with Clerk",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"vite-node machine-a/server.ts\" \"vite-node machine-b/server.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clerk/m2m-example.git"
+  },
+  "keywords": [
+    "m2m",
+    "machine",
+    "auth",
+    "clerk"
+  ],
+  "author": "Jeff Escalante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clerk/m2m-example/issues"
+  },
+  "homepage": "https://github.com/clerk/m2m-example#readme",
+  "dependencies": {
+    "@clerk/express": "^1.7.17",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "vite-node": "^3.2.4"
+  }
+}
