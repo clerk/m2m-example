@@ -16,8 +16,6 @@ app.get("/", (_, res) => {
 app.get("/send", async (_, res) => {
   const m2mToken = await clerkClient.m2mTokens.create();
 
-  console.log(m2mToken);
-
   await fetch("http://localhost:3001/receive", {
     method: "POST",
     headers: {
