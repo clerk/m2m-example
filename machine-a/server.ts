@@ -14,8 +14,10 @@ app.get("/", (_, res) => {
 });
 
 app.get("/send", async (_, res) => {
+  // create an m2m token
   const m2mToken = await clerkClient.m2mTokens.create();
 
+  // send the token to machine B
   await fetch("http://localhost:3001/receive", {
     method: "POST",
     headers: {
