@@ -14,15 +14,15 @@ app.get("/", (_, res) => {
 });
 
 app.get("/send", async (_, res) => {
-  // create an m2m token
-  const m2mToken = await clerkClient.m2mTokens.create();
+  // create an m2m token object
+  const m2mObject = await clerkClient.m2m.createToken();
 
   // send the token to machine B
   await fetch("http://localhost:3001/receive", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${m2mToken.secret}`,
+      Authorization: `Bearer ${m2mObject.token}`,
     },
     body: JSON.stringify({ message: "Hello from Machine A" }),
   })

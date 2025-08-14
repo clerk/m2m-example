@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/clerk/m2m-example#readme",
   "dependencies": {
-    "@clerk/express": "^1.7.17",
+    "@clerk/express": "^1.7.20",
     "dotenv": "^17.2.1",
     "express": "^5.1.0"
   },
