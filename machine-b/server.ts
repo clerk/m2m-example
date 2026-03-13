@@ -18,7 +18,7 @@ app.post("/receive", async (req, res) => {
   const token = req.headers.authorization?.split(" ")[1];
 
   // verify the token
-  const m2mToken = await clerkClient.m2m.verifyToken({
+  const m2mToken = await clerkClient.m2m.verify({
     token,
   });
 
