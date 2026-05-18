@@ -1,0 +1,4 @@
+allowBuilds:
+  '@clerk/shared': false
+  esbuild: true
+minimumReleaseAge: 2880
